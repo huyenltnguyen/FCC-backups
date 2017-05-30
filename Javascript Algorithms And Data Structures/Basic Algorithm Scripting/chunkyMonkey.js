@@ -1,7 +1,11 @@
+// solution without mutation
 function chunkArrayInGroups(arr, size) {
   var newArr = [];
-  while (arr.length > 0) {
-    newArr.push(arr.splice(0, size));
+  var index = 0;
+  
+  while (index < arr.length) {
+    newArr.push(arr.slice(index, index + size));
+    index += size;
   }
   return newArr;
 }
