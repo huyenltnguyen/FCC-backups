@@ -1,0 +1,93 @@
+html, body {
+	background: #99dea9;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+	width: 60%;
+	background-color: #fefefe;	
+	margin: auto;
+	padding: 15px 0;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.row {
+	margin: 20px 0;
+}
+
+.labels {
+	width: 40%;
+	text-align: right;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
+
+.inputs {
+	width: 40%;
+	text-align: left;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.inputs label {
+	margin-left: 5px;
+}
+
+textarea {
+	width: 260px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+@media (max-width: 1050px) {
+	.wrapper {
+		width: 75%;
+	}
+}
+
+@media (max-width: 820px) {
+	.wrapper {
+		width: 90%;
+	}
+
+	textarea {
+		width: 90%;
+	}
+}
+
+@media (max-width: 600px) {
+	.labels, .inputs {
+		width: 42%;
+	}	
+}
+
+@media (max-width: 500px) {
+	.wrapper {
+		width: 75%;
+		padding: 15px;
+	}
+
+	.labels, .inputs {
+		width: 100%;
+		display: block;
+		text-align: left;
+		margin: 7px 0;
+	}
+}
