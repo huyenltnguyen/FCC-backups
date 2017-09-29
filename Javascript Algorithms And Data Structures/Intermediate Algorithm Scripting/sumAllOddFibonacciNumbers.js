@@ -1,12 +1,12 @@
 function sumFibs(num) {
-	const fibs = generateFibonacciSquence(num);
+	const fibs = oddFibSequence(num);
 
 	return fibs.reduce(function(sum, value) {
 		return sum + value;
 	}, 0);
 }
 
-function generateFibonacciSquence(maxNum) {
+function oddFibSequence(maxNum) {
 	let fibs = [1, 1];
 
 	while (fibs[fibs.length - 1] + fibs[fibs.length - 2] <= maxNum ) {
@@ -19,4 +19,4 @@ function generateFibonacciSquence(maxNum) {
 }
 
 module.exports.sumFibs = sumFibs;
-module.exports.generateFibonacciSquence = generateFibonacciSquence;
+module.exports.oddFibSequence = oddFibSequence;

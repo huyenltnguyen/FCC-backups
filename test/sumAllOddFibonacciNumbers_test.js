@@ -1,9 +1,30 @@
 const assert = require('chai').assert;
 
 describe('Fibonacci Sequence Generator', function() {
-	var generateFibonacciSquence = require('../Javascript Algorithms And Data Structures/Intermediate Algorithm Scripting/sumAllOddFibonacciNumbers').generateFibonacciSquence;
+	var oddFibSequence = require('../Javascript Algorithms And Data Structures/Intermediate Algorithm Scripting/sumAllOddFibonacciNumbers').oddFibSequence;
 
 	it('should return an array', function() {
-		assert.isArray(generateFibonacciSquence(4), 'what kind of tea do we want?');
+		assert.isArray(oddFibSequence(4), 'should return an array');
 	});
-})
+
+	it('should return an array that has 3 elements', function() {
+		assert.lengthOf(oddFibSequence(4), 3);
+	})
+
+	it('should return an array that contains 1, 1, 3', function() {
+		assert.include(oddFibSequence(4), 1);
+		assert.include(oddFibSequence(4), 3);
+	});
+});
+
+describe('Sum Fibonacci Sequence', function() {
+	var sumFibs = require('../Javascript Algorithms And Data Structures/Intermediate Algorithm Scripting/sumAllOddFibonacciNumbers').sumFibs;
+	
+	it('should return a number', function() {
+		assert.isNumber(sumFibs(4));
+	});
+
+	it('should return 5', function() {
+		assert.strictEqual(sumFibs(4), 5);
+	});
+});
