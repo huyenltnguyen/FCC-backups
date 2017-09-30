@@ -7,13 +7,8 @@ describe('Fibonacci Sequence Generator', function() {
 		assert.isArray(oddFibSequence(4), 'should return an array');
 	});
 
-	it('should return an array that has 3 elements', function() {
-		assert.lengthOf(oddFibSequence(4), 3);
-	})
-
 	it('should return an array that contains 1, 1, 3', function() {
-		assert.include(oddFibSequence(4), 1);
-		assert.include(oddFibSequence(4), 3);
+		assert.deepEqual(oddFibSequence(4), [1, 1, 3]);		
 	});
 });
 
