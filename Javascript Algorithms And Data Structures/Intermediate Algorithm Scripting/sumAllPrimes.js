@@ -1,4 +1,8 @@
 function sumPrimes(num) {
+	if (num <= 1) {
+		return num;
+	}
+	
   const primes = generatePrimes(num);
 
   return primes.reduce(function(sum, val) {
